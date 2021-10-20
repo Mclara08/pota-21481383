@@ -10,7 +10,7 @@ public class VetorPesquisa {
 
 	public VetorPesquisa() {}
 	
-	private int pesquisaBinaria(String chave) {
+	public String pesquisaBinaria(String chave) {
 		int inicio = 0, meio, fim = v.length-1;
 		
         while (inicio <= fim) {
@@ -20,7 +20,9 @@ public class VetorPesquisa {
             
             if (var == 0) {
             	cont++;
-                return meio;
+            	System.out.println("Foram realizadas " + cont + " comparações!");
+            	cont = 0;
+                return v[meio].toString();
             } if (var > 0) {
                 inicio = meio + 1;
                 cont++;
@@ -29,28 +31,10 @@ public class VetorPesquisa {
                 cont++;
             }
         }
-		
-		return -1;
-		
-	}
-	
-	public String buscaCliente(String nome) {
-		
-		int retorno = pesquisaBinaria(nome.trim());
-		
-		if(retorno != -1) {
-			for (int i = 0; i < v.length; i++) {
-				if(i == retorno) {
-					System.out.println("Foram realizadas " + cont + " comparações!");
-					cont=0;
-					return v[i].toString();
-				}
-			}
-		}
-
-		System.out.println("Foram realizadas " + cont + " comparações!");
-		cont=0;
-		return "Cliente não encontrado na base!";
+        
+        System.out.println("Foram realizadas " + cont + " comparações!");
+        cont = 0;
+		return "Cliente não encontrado!";
 		
 	}
 	
