@@ -1,6 +1,7 @@
 package util;
 
 import java.io.FileReader;
+import java.text.Normalizer;
 import java.util.Scanner;
 
 import classe.Cliente;
@@ -19,7 +20,8 @@ public class Util {
         	while (sc.hasNext()) {
         		Cliente cli = new Cliente();
         		row = sc.nextLine();
-        	    data = row.split(",");
+        		String linha = Normalizer.normalize(row, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
+        	    data = linha.split(",");
         	    cli.setNome(data[0]);
         	    cli.setSexo(data[1]);
         	    cli.setEndereco(data[2]);

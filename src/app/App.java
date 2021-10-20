@@ -11,6 +11,10 @@ public class App {
 		VetorPesquisa vet = new VetorPesquisa();
 		Scanner sc = new Scanner(System.in);
 
+//		for (int i = 0; i < vet.v.length; i++) {
+//			System.out.println(vet.v[i]);
+//		}
+		
 		boolean s = true;
 		
 		do {

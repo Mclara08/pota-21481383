@@ -42,12 +42,14 @@ public class VetorPesquisa {
 			for (int i = 0; i < v.length; i++) {
 				if(i == retorno) {
 					System.out.println("Foram realizadas " + cont + " comparações!");
+					cont=0;
 					return v[i].toString();
 				}
 			}
 		}
 
 		System.out.println("Foram realizadas " + cont + " comparações!");
+		cont=0;
 		return "Cliente não encontrado na base!";
 		
 	}
