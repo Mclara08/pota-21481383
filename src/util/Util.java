@@ -10,7 +10,7 @@ public class Util {
 	public static Cliente[] leArquivo() {
 
         try {
-        	Scanner sc = new Scanner(new FileReader("../media/arquivoDados.csv"));
+        	Scanner sc = new Scanner(new FileReader("C:/Users/mclar/Downloads/arquivoDados.csv"));
         	String row = null;
         	String[] data = null;
     		Cliente[] vetor = new Cliente[5824];
