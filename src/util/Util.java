@@ -21,7 +21,7 @@ public class Util {
         		Cliente cli = new Cliente();
         		row = sc.nextLine();
         		String linha = Normalizer.normalize(row, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
-        	    data = linha.trim().split(",");
+        	    data = linha.split(",");
         	    cli.setNome(data[0]);
         	    cli.setSexo(data[1]);
         	    cli.setEndereco(data[2]);
